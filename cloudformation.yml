@@ -11,7 +11,7 @@ Resources:
       GroupName: TestSG
       GroupDescription: Test security group
       VpcId: !Ref VPC
-Resources:
+
   WebServerInstance:
     Type: 'AWS::EC2::Instance'
     Metadata:
