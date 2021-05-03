@@ -1,0 +1,20 @@
+---
+- name: install apache & php & mysql
+  hosts: demoservers
+  become: true
+  become_user: root
+  gather_facts: true
+  tasks:
+    - name: "Install httpd"
+      package: name=httpd state=present
+    - name: "Install php.x86_64"
+      package: name=php.x86_64  state=present
+    - name: "Install php-cli"
+      package: name=php-cli state=present
+    - name: "Install MySQL-python.x86_64"
+      package: name=MySQL-python.x86_64 state=present
+    - name: "Install php-gd"
+      package: name=php-gd state=present
+    - name: "Install php-mysql"
+      package: name=php-mysql state=present
+
